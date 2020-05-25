@@ -2,6 +2,7 @@ package com.example.pillsogood;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private community_fragment frag2;
     private pharmacy_fragment frag3;
     private pillcheck_fragment frag4;
-    private ImageView home_search_image = (ImageView) findViewById(R.id.imageview2);
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -63,7 +64,12 @@ public class MainActivity extends AppCompatActivity {
         frag4=new pillcheck_fragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
     }
+    public void replaceFragment(Fragment fragment){
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
 
+        ft.replace(R.id.Main_Frame, fragment).commit();
+    }
     // 프레그먼트 교체 함수 구현
     private void setFrag(int n)
     {

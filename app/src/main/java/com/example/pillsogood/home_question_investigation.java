@@ -9,9 +9,15 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-public class home_question_investigation extends home_fragment{
+public class home_question_investigation extends Fragment {
     private View view;
+
+    public static home_question_investigation newInstance() {
+        return new home_question_investigation();
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         view = inflater.inflate(R.layout.pharmacy_fragment,container,false);
 

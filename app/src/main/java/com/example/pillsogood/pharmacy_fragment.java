@@ -16,6 +16,9 @@ public class pharmacy_fragment extends Fragment // Fragment 클래스를 상속�
 
     private View view;
 
+    public static pharmacy_fragment newInstance() {
+        return new pharmacy_fragment();
+    }
 
     @Nullable
     @Override

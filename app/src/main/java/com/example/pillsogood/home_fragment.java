@@ -11,12 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class home_fragment extends Fragment // Fragment 클래스를 상속받아야한다
 {
 
     private View view;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
+    private home_question_investigation frag1_1;
 
+    public static home_fragment newInstance() {
+        return new home_fragment();
+    }
 
     @Nullable
     @Override
@@ -38,6 +46,22 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
         imageView3.setImageResource(R.drawable.profile_image);
 
         textView.setText("Pill So Good");
+
+        imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(pillcheck_fragment.newInstance());
+            }
+        });
+
+        imageView2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(home_question_investigation.newInstance());
+            }
+        });
 
         return view;
     }

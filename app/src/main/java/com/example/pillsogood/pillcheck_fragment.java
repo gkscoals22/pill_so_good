@@ -15,6 +15,9 @@ public class pillcheck_fragment extends Fragment // Fragment 클래스를 상속
 
     private View view;
 
+    public static pillcheck_fragment newInstance() {
+        return new pillcheck_fragment();
+    }
 
     @Nullable
     @Override

@@ -16,7 +16,9 @@ public class community_fragment extends Fragment // Fragment 클래스를 상속
 
     private View view;
 
-
+    public static community_fragment newInstance() {
+        return new community_fragment();
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
