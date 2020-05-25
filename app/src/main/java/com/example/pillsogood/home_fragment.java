@@ -51,7 +51,7 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
             public void onClick(View v){
 
                 MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(pillcheck_fragment.newInstance());
+                activity.replaceFragment(home_question_investigation.newInstance());
             }
         });
 
@@ -59,9 +59,11 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
             public void onClick(View v){
 
                 MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(home_question_investigation.newInstance());
+                activity.replaceFragment(pillcheck_fragment.newInstance());
             }
         });
+
+
 
         return view;
     }
