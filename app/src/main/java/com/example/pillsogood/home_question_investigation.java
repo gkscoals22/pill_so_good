@@ -64,13 +64,16 @@ public class home_question_investigation extends Fragment {
         imageView11.setImageResource(R.drawable.profile_image);
         next_image.setImageResource(R.drawable.next);
 
+        //각 이미지에 대한 클릭 이벤트 처리
         imageView[0].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                //이미지 클릭시 배경색 변경
                 if(!selectedImage[0] && checkSelectImageCount()) {
                     imageView[0].setBackgroundResource(R.color.colorAccent);
                     selectedImage[0] = true;
                     selectImageCount++;
                 }
+                //선택 되어 있는 이미지 투명색으로 다시 변경
                 else if(selectedImage[0]) {
                     imageView[0].setBackgroundResource(R.color.transparent);
                     selectedImage[0] = false;
@@ -209,6 +212,7 @@ public class home_question_investigation extends Fragment {
             }
         });
 
+        //다음 이미지 클릭 이벤트
         next_image.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 MainActivity activity = (MainActivity)getActivity();
@@ -219,8 +223,11 @@ public class home_question_investigation extends Fragment {
         return view;
     }
 
+    //선택된 이미지 갯수 체크 함수
     public boolean checkSelectImageCount(){
         TextView textView2 = (TextView)view.findViewById(R.id.textview2);
+
+        //이미지 갯수가 3개 이상일 시 출력 될 텍스트
         if(selectImageCount >= 3){
             textView2.setText("선택은 3개까지 가능합니다.");
             return false;
