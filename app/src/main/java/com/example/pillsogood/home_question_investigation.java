@@ -1,5 +1,6 @@
 package com.example.pillsogood;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -17,9 +18,9 @@ import androidx.fragment.app.Fragment;
 public class home_question_investigation extends Fragment {
     private View view;
     private ImageView[] imageView = new ImageView[9];
-//    public int i;
     public boolean selectedImage[] = new boolean[9];
-    private int selectImageCount = 0;
+    public int selectImageCount = 0;
+    private Activity activity;
     public static home_question_investigation newInstance() {
         return new home_question_investigation();
     }
@@ -38,6 +39,8 @@ public class home_question_investigation extends Fragment {
         imageView[8] = (ImageView)view.findViewById(R.id.imageview9);
         ImageView imageView10 = (ImageView)view.findViewById(R.id.imageview10);
         ImageView imageView11 = (ImageView)view.findViewById(R.id.imageview11);
+        ImageView next_image = (ImageView)view.findViewById(R.id.next_image);
+
         imageView11.getLayoutParams().height=100;
         imageView11.getLayoutParams().width=100;
 
@@ -59,124 +62,171 @@ public class home_question_investigation extends Fragment {
         imageView[8].setImageResource(R.drawable.store_menu9);
         imageView10.setImageResource(R.drawable.store_menu_question);
         imageView11.setImageResource(R.drawable.profile_image);
+        next_image.setImageResource(R.drawable.next);
 
         imageView[0].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[0]) {
+                if(!selectedImage[0] && checkSelectImageCount()) {
                     imageView[0].setBackgroundResource(R.color.colorAccent);
                     selectedImage[0] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[0]) {
                     imageView[0].setBackgroundResource(R.color.transparent);
                     selectedImage[0] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[1].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[1]) {
-                    imageView[1].setBackgroundResource(R.color.colorAccent);
-                    selectedImage[1] = true;
-                }
-                else if(selectedImage[1]) {
-                    imageView[1].setBackgroundResource(R.color.transparent);
-                    selectedImage[1] = false;
+                if(checkSelectImageCount()) {
+                    if (!selectedImage[1]) {
+                        imageView[1].setBackgroundResource(R.color.colorAccent);
+                        selectedImage[1] = true;
+                        selectImageCount++;
+                    } else if (selectedImage[1]) {
+                        imageView[1].setBackgroundResource(R.color.transparent);
+                        selectedImage[1] = false;
+                        selectImageCount--;
+                        checkSelectImageCount();
+                    }
                 }
             }
         });
 
         imageView[2].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[2]) {
+                if(!selectedImage[2] && checkSelectImageCount()) {
                     imageView[2].setBackgroundResource(R.color.colorAccent);
                     selectedImage[2] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[2]) {
                     imageView[2].setBackgroundResource(R.color.transparent);
                     selectedImage[2] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[3].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[3]) {
+                if(!selectedImage[3] && checkSelectImageCount()) {
                     imageView[3].setBackgroundResource(R.color.colorAccent);
                     selectedImage[3] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[3]) {
                     imageView[3].setBackgroundResource(R.color.transparent);
                     selectedImage[3] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[4].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[4]) {
+                if(!selectedImage[4] && checkSelectImageCount()) {
                     imageView[4].setBackgroundResource(R.color.colorAccent);
                     selectedImage[4] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[4]) {
                     imageView[4].setBackgroundResource(R.color.transparent);
                     selectedImage[4] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[5].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[5]) {
+                if(!selectedImage[5] && checkSelectImageCount()) {
                     imageView[5].setBackgroundResource(R.color.colorAccent);
                     selectedImage[5] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[5]) {
                     imageView[5].setBackgroundResource(R.color.transparent);
                     selectedImage[5] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[6].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[6]) {
+                if(!selectedImage[6] && checkSelectImageCount()) {
                     imageView[6].setBackgroundResource(R.color.colorAccent);
                     selectedImage[6] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[6]) {
                     imageView[6].setBackgroundResource(R.color.transparent);
                     selectedImage[6] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[7].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[7]) {
+                if(!selectedImage[7] && checkSelectImageCount()) {
                     imageView[7].setBackgroundResource(R.color.colorAccent);
                     selectedImage[7] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[7]) {
                     imageView[7].setBackgroundResource(R.color.transparent);
                     selectedImage[7] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
         imageView[8].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(!selectedImage[8]) {
+                if(!selectedImage[8] && checkSelectImageCount()) {
                     imageView[8].setBackgroundResource(R.color.colorAccent);
                     selectedImage[8] = true;
+                    selectImageCount++;
                 }
                 else if(selectedImage[8]) {
                     imageView[8].setBackgroundResource(R.color.transparent);
                     selectedImage[8] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
 
+        next_image.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(home_selected_investigation.newInstance());
+            }
+        });
+
         return view;
+    }
+
+    public boolean checkSelectImageCount(){
+        TextView textView2 = (TextView)view.findViewById(R.id.textview2);
+        if(selectImageCount >= 3){
+            textView2.setText("선택은 3개까지 가능합니다.");
+            return false;
+        }
+        else
+            textView2.setText("");
+        return true;
     }
 }
