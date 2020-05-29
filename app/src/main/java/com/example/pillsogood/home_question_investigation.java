@@ -1,5 +1,8 @@
 package com.example.pillsogood;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +17,9 @@ import androidx.fragment.app.Fragment;
 public class home_question_investigation extends Fragment {
     private View view;
     private ImageView[] imageView = new ImageView[9];
+//    public int i;
+    public boolean selectedImage[] = new boolean[9];
+    private int selectImageCount = 0;
     public static home_question_investigation newInstance() {
         return new home_question_investigation();
     }
@@ -35,6 +41,9 @@ public class home_question_investigation extends Fragment {
         imageView11.getLayoutParams().height=100;
         imageView11.getLayoutParams().width=100;
 
+        for(int i = 0 ; i < selectedImage.length ; i++)
+            selectedImage[i] = false;
+
         TextView textView = (TextView)view.findViewById(R.id.textview);
         textView.setText("Pill so Good");
 
@@ -51,14 +60,122 @@ public class home_question_investigation extends Fragment {
         imageView10.setImageResource(R.drawable.store_menu_question);
         imageView11.setImageResource(R.drawable.profile_image);
 
-        for(int i = 0 ; i < imageView.length ; i++) {
-            imageView[i].setOnClickListener(new View.OnClickListener(){
-                public void onClick(View v){
-                    MainActivity activity = (MainActivity)getActivity();
-                    activity.replaceFragment(home_selected_investigation.newInstance());
+        imageView[0].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[0]) {
+                    imageView[0].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[0] = true;
                 }
-            });
-        }
+                else if(selectedImage[0]) {
+                    imageView[0].setBackgroundResource(R.color.transparent);
+                    selectedImage[0] = false;
+                }
+            }
+        });
+
+        imageView[1].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[1]) {
+                    imageView[1].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[1] = true;
+                }
+                else if(selectedImage[1]) {
+                    imageView[1].setBackgroundResource(R.color.transparent);
+                    selectedImage[1] = false;
+                }
+            }
+        });
+
+        imageView[2].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[2]) {
+                    imageView[2].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[2] = true;
+                }
+                else if(selectedImage[2]) {
+                    imageView[2].setBackgroundResource(R.color.transparent);
+                    selectedImage[2] = false;
+                }
+            }
+        });
+
+        imageView[3].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[3]) {
+                    imageView[3].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[3] = true;
+                }
+                else if(selectedImage[3]) {
+                    imageView[3].setBackgroundResource(R.color.transparent);
+                    selectedImage[3] = false;
+                }
+            }
+        });
+
+        imageView[4].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[4]) {
+                    imageView[4].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[4] = true;
+                }
+                else if(selectedImage[4]) {
+                    imageView[4].setBackgroundResource(R.color.transparent);
+                    selectedImage[4] = false;
+                }
+            }
+        });
+
+        imageView[5].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[5]) {
+                    imageView[5].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[5] = true;
+                }
+                else if(selectedImage[5]) {
+                    imageView[5].setBackgroundResource(R.color.transparent);
+                    selectedImage[5] = false;
+                }
+            }
+        });
+
+        imageView[6].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[6]) {
+                    imageView[6].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[6] = true;
+                }
+                else if(selectedImage[6]) {
+                    imageView[6].setBackgroundResource(R.color.transparent);
+                    selectedImage[6] = false;
+                }
+            }
+        });
+
+        imageView[7].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[7]) {
+                    imageView[7].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[7] = true;
+                }
+                else if(selectedImage[7]) {
+                    imageView[7].setBackgroundResource(R.color.transparent);
+                    selectedImage[7] = false;
+                }
+            }
+        });
+
+        imageView[8].setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!selectedImage[8]) {
+                    imageView[8].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[8] = true;
+                }
+                else if(selectedImage[8]) {
+                    imageView[8].setBackgroundResource(R.color.transparent);
+                    selectedImage[8] = false;
+                }
+            }
+        });
 
         return view;
     }

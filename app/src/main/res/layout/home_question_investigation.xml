@@ -54,7 +54,8 @@
             android:layout_column="1"
             android:layout_span="2"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            />
         <ImageView
             android:id="@+id/imageview2"
             android:layout_width="wrap_content"
