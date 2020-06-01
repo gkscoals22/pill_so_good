@@ -22,7 +22,10 @@ public class home_selected_investigation extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         view = inflater.inflate(R.layout.home_selected_investigation,container,false);
 
+        //다른 클래스 정의
         home_question_investigation surveyListClass = new home_question_investigation();
+
+        //Linearlayout id 가져오기
         LinearLayout layout1 = (LinearLayout)view.findViewById(R.id.layout_eye);
         LinearLayout layout2 = (LinearLayout)view.findViewById(R.id.layout_brain);
         LinearLayout layout3 = (LinearLayout)view.findViewById(R.id.layout_tired);
@@ -33,11 +36,7 @@ public class home_selected_investigation extends Fragment {
         LinearLayout layout8 = (LinearLayout)view.findViewById(R.id.layout_digestion);
         LinearLayout layout9 = (LinearLayout)view.findViewById(R.id.layout_skin);
 
-        System.out.print(surveyListClass.getSelectImage1());
-        System.out.print(surveyListClass.getSelectImage2());
-        System.out.print(surveyListClass.getSelectImage3());
-        System.out.print(surveyListClass.getSelectImage4());
-        System.out.println(surveyListClass.getSelectImage5());
+        //이미지 선택되지 않았을 때 내용 보이지 않게 처리
         if(!surveyListClass.getSelectImage1())
             layout1.setVisibility(View.GONE);
         if(!surveyListClass.getSelectImage2())

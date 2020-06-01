@@ -18,7 +18,9 @@ import androidx.fragment.app.Fragment;
 public class home_question_investigation extends Fragment {
     private View view;
     private ImageView[] imageView = new ImageView[9];
+    //이미지 선택여부 확인 변수
     public static boolean selectedImage[] = new boolean[9];
+    //이미지 선택 갯수 확인 변수
     public int selectImageCount = 0;
     private Activity activity;
     public static home_question_investigation newInstance() {
@@ -237,7 +239,7 @@ public class home_question_investigation extends Fragment {
         return true;
     }
 
-    public boolean getSelectImage1(){
+    public boolean getSelectImage1() {
         return selectedImage[0];
     }
     public boolean getSelectImage2(){
