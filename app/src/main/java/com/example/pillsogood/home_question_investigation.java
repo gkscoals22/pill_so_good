@@ -19,7 +19,7 @@ public class home_question_investigation extends Fragment {
     private View view;
     private ImageView[] imageView = new ImageView[9];
     public static boolean selectedImage[] = new boolean[9];
-    public static int selectImageCount = 0;
+    public int selectImageCount = 0;
     private Activity activity;
     public static home_question_investigation newInstance() {
         return new home_question_investigation();
