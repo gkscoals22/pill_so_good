@@ -18,8 +18,8 @@ import androidx.fragment.app.Fragment;
 public class home_question_investigation extends Fragment {
     private View view;
     private ImageView[] imageView = new ImageView[9];
-    public boolean selectedImage[] = new boolean[9];
-    public int selectImageCount = 0;
+    public static boolean selectedImage[] = new boolean[9];
+    public static int selectImageCount = 0;
     private Activity activity;
     public static home_question_investigation newInstance() {
         return new home_question_investigation();
@@ -235,5 +235,33 @@ public class home_question_investigation extends Fragment {
         else
             textView2.setText("");
         return true;
+    }
+
+    public boolean getSelectImage1(){
+        return selectedImage[0];
+    }
+    public boolean getSelectImage2(){
+        return selectedImage[1];
+    }
+    public boolean getSelectImage3(){
+        return selectedImage[2];
+    }
+    public boolean getSelectImage4(){
+        return selectedImage[3];
+    }
+    public boolean getSelectImage5(){
+        return selectedImage[4];
+    }
+    public boolean getSelectImage6(){
+        return selectedImage[5];
+    }
+    public boolean getSelectImage7(){
+        return selectedImage[6];
+    }
+    public boolean getSelectImage8(){
+        return selectedImage[7];
+    }
+    public boolean getSelectImage9(){
+        return selectedImage[8];
     }
 }

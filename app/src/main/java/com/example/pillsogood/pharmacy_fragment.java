@@ -56,7 +56,6 @@ public class pharmacy_fragment extends Fragment // Fragment 클래스를 상속�
         imageView10.setImageResource(R.drawable.store_menu_question);
         imageView11.setImageResource(R.drawable.profile_image);
 
-
         return view;
     }
 }
