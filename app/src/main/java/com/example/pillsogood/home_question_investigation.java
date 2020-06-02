@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 public class home_question_investigation extends Fragment {
     private View view;
+    //이미지뷰 배열 선언
     private ImageView[] imageView = new ImageView[9];
     //이미지 선택여부 확인 변수
     public static boolean selectedImage[] = new boolean[9];
