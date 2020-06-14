@@ -502,13 +502,6 @@
                     android:text="피부에 염증이 자주 생겨요." />
 
                 <CheckBox
-                    android:id="@+id/select_problem_skin_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:text="피부에 여드름이나 트러블이 자주 생겨요." />
-
-                <CheckBox
                     android:id="@+id/select_problem_skin_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -563,6 +556,13 @@
                     android:layout_weight="1"
                     android:ems="5"
                     android:inputType="number" />
+
+                <CheckBox
+                    android:id="@+id/select_problem_skin_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="피부에 여드름이나 트러블이 자주 생겨요." />
             </LinearLayout>
 
             <LinearLayout
@@ -743,10 +743,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:text="단 음식(빵/과자, 초콜릿, 탄산음료 등)을 자주 먹어요." />
+                    android:text="일주일에 4일 이상 고기(삼겹살 등 메인 요리)를 먹어요" />
 
                 <CheckBox
                     android:id="@+id/check13_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="단 음식(빵/과자, 초콜릿, 탄산음료 등)을 자주 먹어요." />
+
+                <CheckBox
+                    android:id="@+id/check13_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -945,6 +952,20 @@
                     android:layout_height="wrap_content"
                     android:checked="false"
                     android:text="선택 할 것이 없어요." />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/result_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="결과" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
