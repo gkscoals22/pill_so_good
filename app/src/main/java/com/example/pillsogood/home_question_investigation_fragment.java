@@ -1,9 +1,6 @@
 package com.example.pillsogood;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class home_question_investigation extends Fragment {
+public class home_question_investigation_fragment extends Fragment {
     private View view;
     //이미지뷰 배열 선언
     private ImageView[] imageView = new ImageView[9];
@@ -24,8 +21,8 @@ public class home_question_investigation extends Fragment {
     //이미지 선택 갯수 확인 변수
     public int selectImageCount = 0;
     private Activity activity;
-    public static home_question_investigation newInstance() {
-        return new home_question_investigation();
+    public static home_question_investigation_fragment newInstance() {
+        return new home_question_investigation_fragment();
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
@@ -219,7 +216,7 @@ public class home_question_investigation extends Fragment {
         next_image.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(home_selected_investigation.newInstance());
+                activity.replaceFragment(home_selected_investigation_fragment.newInstance());
             }
         });
 

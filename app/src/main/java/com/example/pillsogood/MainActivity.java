@@ -6,11 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fm;
     private FragmentTransaction ft;
     private home_fragment frag1;
-    private home_question_investigation frag1_1;
+    private home_question_investigation_fragment frag1_1;
     private community_fragment frag2;
     private pharmacy_fragment frag3;
-    private pillcheck_fragment frag4;
+    private home_recommend_pill_fragment frag4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         frag1=new home_fragment();
-        frag1_1= new home_question_investigation();
+        frag1_1= new home_question_investigation_fragment();
         frag2=new community_fragment();
         frag3=new pharmacy_fragment();
-        frag4=new pillcheck_fragment();
+        frag4=new home_recommend_pill_fragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
     }
     public void replaceFragment(Fragment fragment){

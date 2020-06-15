@@ -6,15 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class home_selected_investigation extends Fragment {
+public class home_selected_investigation_fragment extends Fragment {
     private View view;
     private int lutein = 0;
     private int magnesium = 0;
@@ -68,15 +66,15 @@ public class home_selected_investigation extends Fragment {
     private CheckBox chk17_3;
     private CheckBox chk17_4;
 
-    public static home_selected_investigation newInstance() {
-        return new home_selected_investigation();
+    public static home_selected_investigation_fragment newInstance() {
+        return new home_selected_investigation_fragment();
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         view = inflater.inflate(R.layout.home_selected_investigation,container,false);
 
         //다른 클래스 정의
-        home_question_investigation surveyListClass = new home_question_investigation();
+        home_question_investigation_fragment surveyListClass = new home_question_investigation_fragment();
 
         //Linearlayout id 가져오기
         LinearLayout layout1 = (LinearLayout)view.findViewById(R.id.layout_eye);
@@ -116,12 +114,8 @@ public class home_selected_investigation extends Fragment {
         resultButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 selectCheckSurvey();
-                System.out.println("lutein:"+lutein);
-                System.out.println("vitaminA:"+vitaminA);
-                System.out.println("vitaminB:"+vitaminB);
-                System.out.println("vitaminC:"+vitaminC);
-                System.out.println("vitaminD:"+vitaminD);
-                System.out.println("omega:"+omega3);
+                MainActivity activity = (MainActivity)getActivity();
+                activity.replaceFragment(home_result_investigation_fragment.newInstance());
             }
         });
         return view;

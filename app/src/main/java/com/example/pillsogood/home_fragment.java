@@ -1,6 +1,5 @@
 package com.example.pillsogood;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +19,7 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
     private View view;
     private FragmentManager fm;
     private FragmentTransaction ft;
-    private home_question_investigation frag1_1;
+    private home_question_investigation_fragment frag1_1;
 
     public static home_fragment newInstance() {
         return new home_fragment();
@@ -51,7 +50,7 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
             public void onClick(View v){
 
                 MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(home_question_investigation.newInstance());
+                activity.replaceFragment(home_question_investigation_fragment.newInstance());
             }
         });
 
@@ -59,7 +58,7 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
             public void onClick(View v){
 
                 MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(pillcheck_fragment.newInstance());
+                activity.replaceFragment(home_recommend_pill_fragment.newInstance());
             }
         });
 
