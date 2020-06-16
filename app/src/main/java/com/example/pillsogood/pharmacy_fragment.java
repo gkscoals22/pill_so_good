@@ -24,7 +24,7 @@ public class pharmacy_fragment extends Fragment // Fragment 클래스를 상속�
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.pharmacy_fragment,container,false);
+        view = inflater.inflate(R.layout.pharmacy,container,false);
 
         ImageView imageView = (ImageView)view.findViewById(R.id.imageview);
         ImageView imageView2 = (ImageView)view.findViewById(R.id.imageview2);

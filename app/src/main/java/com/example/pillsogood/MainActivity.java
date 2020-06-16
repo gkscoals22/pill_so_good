@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private home_question_investigation_fragment frag1_1;
     private community_fragment frag2;
     private pharmacy_fragment frag3;
-    private home_recommend_pill_fragment frag4;
+    private pill_check_fragment frag4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         frag1_1= new home_question_investigation_fragment();
         frag2=new community_fragment();
         frag3=new pharmacy_fragment();
-        frag4=new home_recommend_pill_fragment();
+        frag4=new pill_check_fragment();
         setFrag(0); // 첫 프래그먼트 화면 지정
     }
     public void replaceFragment(Fragment fragment){
