@@ -41,11 +41,11 @@ public class pill_check_fragment extends Fragment // Fragment 클래스를 상�
         profile.getLayoutParams().height=100;
         profile.getLayoutParams().width=100;
         profile.setImageResource(R.drawable.profile_image);
-        imageview.setImageResource(R.drawable.today_pill_check);
-        imageview2.setImageResource(R.drawable.pill_ing);
-        imageview3.setImageResource(R.drawable.today);
-        imageview4.setImageResource(R.drawable.pill_after_meal);
-        imageview5.setImageResource(R.drawable.banner);
+        imageview.setImageResource(R.drawable.today_pill_check2);
+        imageview2.setImageResource(R.drawable.pill_ing2);
+        imageview3.setImageResource(R.drawable.today2);
+        imageview4.setImageResource(R.drawable.pill_after_meal2);
+        imageview5.setImageResource(R.drawable.banner2);
 
         return view;
     }
