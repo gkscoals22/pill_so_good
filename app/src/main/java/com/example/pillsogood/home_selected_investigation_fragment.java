@@ -14,14 +14,14 @@ import androidx.fragment.app.Fragment;
 
 public class home_selected_investigation_fragment extends Fragment {
     private View view;
-    private int lutein = 0;
-    private int magnesium = 0;
-    private int vitaminA = 0;
-    private int vitaminB = 0;
-    private int vitaminC = 0;
-    private int vitaminD = 0;
-    private int omega3 = 0;
-    private int lactobacillus = 0;
+    private static int lutein = 0;
+    private static int magnesium = 0;
+    private static int vitaminA = 0;
+    private static int vitaminB = 0;
+    private static int vitaminC = 0;
+    private static int vitaminD = 0;
+    private static int omega3 = 0;
+    private static int lactobacillus = 0;
     private Button resultButton;
 
     private CheckBox chk10_1;
@@ -246,5 +246,54 @@ public class home_selected_investigation_fragment extends Fragment {
         if(chk17_3.isChecked()){
             omega3++;
         }
+    }
+
+    public static int getLactobacillus() {
+        return lactobacillus;
+    }
+    public static int getMagnesium() {
+        return magnesium;
+    }
+    public static int getLutein() {
+        return lutein;
+    }
+    public static int getOmega3() {
+        return omega3;
+    }
+    public static int getVitaminA() {
+        return vitaminA;
+    }
+    public static int getVitaminB() {
+        return vitaminB;
+    }
+    public static int getVitaminC() {
+        return vitaminC;
+    }
+    public static int getVitaminD() {
+        return vitaminD;
+    }
+    public static void setLactobacillus(int lactobacillus) {
+        home_selected_investigation_fragment.lactobacillus = lactobacillus;
+    }
+    public static void setMagnesium(int magnesium) {
+        home_selected_investigation_fragment.magnesium = magnesium;
+    }
+    public static void setLutein(int lutein) {
+        home_selected_investigation_fragment.lutein = lutein;
+    }
+    public static void setOmega3(int omega3) {
+        home_selected_investigation_fragment.omega3 = omega3;
+    }
+    public static void setVitaminA(int vitaminA) {
+        home_selected_investigation_fragment.vitaminA = vitaminA;
+    }
+    public static void setVitaminB(int vitaminB) {
+        home_selected_investigation_fragment.vitaminB = vitaminB;
+    }
+    public static void setVitaminC(int vitaminC) {
+        home_selected_investigation_fragment.vitaminC = vitaminC;
+    }
+    public static void setVitaminD(int vitaminD) {
+        home_selected_investigation_fragment.vitaminD = vitaminD;
     }
 }
