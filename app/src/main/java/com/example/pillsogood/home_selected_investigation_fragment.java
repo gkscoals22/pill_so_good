@@ -14,6 +14,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class home_selected_investigation_fragment extends Fragment {
     private View view;
     private static int lutein = 0;
@@ -24,7 +27,6 @@ public class home_selected_investigation_fragment extends Fragment {
     private static int vitaminD = 0;
     private static int omega3 = 0;
     private static int lactobacillus = 0;
-
     private static boolean isChecked10 = false;
     private static boolean isChecked11 = false;
     private static boolean isChecked12 = false;
@@ -32,9 +34,7 @@ public class home_selected_investigation_fragment extends Fragment {
     private static boolean isChecked14 = false;
     private static boolean isChecked15 = false;
     private static boolean isChecked16 = false;
-    private static boolean isChecked17 = false;
-
-    private Button resultButton;
+    private static boolean isChecked17 = false;    private Button resultButton;
 
     private CheckBox chk10_1;
     private CheckBox chk10_2;
@@ -169,6 +169,7 @@ public class home_selected_investigation_fragment extends Fragment {
             public void onClick(View v) {
                 initialize();
                 selectCheckSurvey();
+                setMaxMin();
                 MainActivity activity = (MainActivity)getActivity();
                 if(isAllCheck()){
                     activity.replaceFragment(home_result_investigation_fragment.newInstance());
@@ -374,5 +375,4 @@ public class home_selected_investigation_fragment extends Fragment {
         isChecked15 = false;
         isChecked16 = false;
         isChecked17 = false;
-    }
-}
+    }}
