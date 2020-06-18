@@ -15,6 +15,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class home_selected_investigation_fragment extends Fragment {
@@ -35,6 +37,12 @@ public class home_selected_investigation_fragment extends Fragment {
     private static boolean isChecked15 = false;
     private static boolean isChecked16 = false;
     private static boolean isChecked17 = false;
+
+//    private static List list = new ArrayList();
+    private static ArrayList<Integer> list = new ArrayList<Integer>();
+
+    private static String firstResult = new String();
+    private static String secondResult = new String();
 
     private Button resultButton;
     private CheckBox chk10_1;
@@ -170,6 +178,11 @@ public class home_selected_investigation_fragment extends Fragment {
             public void onClick(View v) {
                 initialize();
                 selectCheckSurvey();
+                resultSurvey();
+                System.out.println("hihi111");
+                System.out.println(getFirstResult());
+                System.out.println(getSecondResult());
+                System.out.println("hihi222222");
                 MainActivity activity = (MainActivity)getActivity();
                 if(isAllCheck()){
                     activity.replaceFragment(home_result_investigation_fragment.newInstance());
@@ -357,6 +370,79 @@ public class home_selected_investigation_fragment extends Fragment {
     public static void setVitaminD(int vitaminD) {
         home_selected_investigation_fragment.vitaminD = vitaminD;
     }
+
+    public static String getFirstResult(){
+        return firstResult;
+    }
+    public static String getSecondResult(){
+        return secondResult;
+    }
+
+    public static void setFirstResult(String firstResult){
+        home_selected_investigation_fragment.firstResult = firstResult;
+    }
+    public static void setSecondResult(String secondResult){
+        home_selected_investigation_fragment.secondResult = secondResult;
+    }
+
+    public void resultSurvey(){
+        //1등, 2등 변수
+        int first, second;
+
+        //초기화된 리스트에 추가
+        list.add(lactobacillus);
+        list.add(magnesium);
+        list.add(lutein);
+        list.add(omega3);
+        list.add(vitaminA);
+        list.add(vitaminB);
+        list.add(vitaminC);
+        list.add(vitaminD);
+
+        //1등 추출 후, 리스트에서 제거
+        first = Collections.max(list);
+
+        if(first == lutein)
+            setFirstResult("lutein");
+        else if(first == magnesium)
+            setFirstResult("magnesium");
+        else if(first == omega3)
+            setFirstResult("omega3");
+        else if(first == lactobacillus)
+            setFirstResult("lactobacillus");
+        else if(first == vitaminA)
+            setFirstResult("vitaminA");
+        else if(first == vitaminB)
+            setFirstResult("vitaminB");
+        else if(first == vitaminC)
+            setFirstResult("vitaminC");
+        else if(first == vitaminD)
+            setFirstResult("vitaminD");
+
+        list.remove(list.indexOf(first));
+
+        //2번째로 큰 수 추출
+        second = Collections.max(list);
+
+        if(second == lutein && !firstResult.equals("lutein"))
+            setSecondResult("lutein");
+        else if(second == magnesium  && !firstResult.equals("magnesium"))
+            setSecondResult("magnesium");
+        else if(second == omega3  && !firstResult.equals("omega3"))
+            setSecondResult("omega3");
+        else if(second == lactobacillus && !firstResult.equals("lactobacillus"))
+            setSecondResult("lactobacillus");
+        else if(second == vitaminA  && !firstResult.equals("vitaminA"))
+            setSecondResult("vitaminA");
+        else if(second == vitaminB  && !firstResult.equals("vitaminB"))
+            setSecondResult("vitaminB");
+        else if(second == vitaminC  && !firstResult.equals("vitaminC"))
+            setSecondResult("vitaminC");
+        else if(second == vitaminD  && !firstResult.equals("vitaminD"))
+            setSecondResult("vitaminD");
+
+    }
+
     public void initialize(){
         lutein = 0;
         magnesium = 0;
@@ -375,5 +461,10 @@ public class home_selected_investigation_fragment extends Fragment {
         isChecked15 = false;
         isChecked16 = false;
         isChecked17 = false;
+
+        firstResult = "";
+        secondResult = "";
+
+        list.clear();
     }
 }

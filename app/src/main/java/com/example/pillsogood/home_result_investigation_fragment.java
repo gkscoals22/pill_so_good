@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,12 @@ public class home_result_investigation_fragment extends Fragment {
     private FragmentTransaction ft;
     private home_result_investigation_fragment frag_result;
 
+    private TextView resultTextView;
+    private TextView firstTextView;
+    private TextView firstTextView2;
+    private TextView secondTextView;
+    private TextView secondTextView2;
+
     public static home_result_investigation_fragment newInstance() {
         return new home_result_investigation_fragment();
     }
@@ -24,6 +31,69 @@ public class home_result_investigation_fragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.home_result_investigation, container, false);
+
+        firstTextView = (TextView)view.findViewById(R.id.first_result);
+        firstTextView2 = (TextView)view.findViewById(R.id.first_result2);
+        secondTextView = (TextView)view.findViewById(R.id.second_result);
+        secondTextView2 = (TextView)view.findViewById(R.id.second_result2);
+
+        if(home_selected_investigation_fragment.getFirstResult().equals("lutein")){
+            firstTextView.setText(R.string.str_lutein);
+            firstTextView2.setText(R.string.str_lutein_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("lactobacillus")){
+            firstTextView.setText(R.string.str_lactobacillus);
+            firstTextView2.setText(R.string.str_lactobacillus_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("magnesium")){
+            firstTextView.setText(R.string.str_magnesium);
+            firstTextView2.setText(R.string.str_magnesium_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("omega3")){
+            firstTextView.setText(R.string.str_omega3);
+            firstTextView2.setText(R.string.str_omega3_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("vitaminB")){
+            firstTextView.setText(R.string.str_vitaminB);
+            firstTextView2.setText(R.string.str_vitaminB_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("vitaminC")){
+            firstTextView.setText(R.string.str_vitaminC);
+            firstTextView2.setText(R.string.str_vitaminC_explain);
+        }
+        else if(home_selected_investigation_fragment.getFirstResult().equals("vitaminD")){
+            firstTextView.setText(R.string.str_vitaminD);
+            firstTextView2.setText(R.string.str_vitaminD_explain);
+        }
+
+        if(home_selected_investigation_fragment.getSecondResult().equals("lutein")){
+            secondTextView.setText(R.string.str_lutein);
+            secondTextView2.setText(R.string.str_lutein_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("lactobacillus")){
+            secondTextView.setText(R.string.str_lactobacillus);
+            secondTextView2.setText(R.string.str_lactobacillus_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("magnesium")){
+            secondTextView.setText(R.string.str_magnesium);
+            secondTextView2.setText(R.string.str_magnesium_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("omega3")){
+            secondTextView.setText(R.string.str_omega3);
+            secondTextView2.setText(R.string.str_omega3_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("vitaminB")){
+            secondTextView.setText(R.string.str_vitaminB);
+            secondTextView2.setText(R.string.str_vitaminB_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("vitaminC")){
+            secondTextView.setText(R.string.str_vitaminC);
+            secondTextView2.setText(R.string.str_vitaminC_explain);
+        }
+        else if(home_selected_investigation_fragment.getSecondResult().equals("vitaminD")){
+            secondTextView.setText(R.string.str_vitaminD);
+            secondTextView2.setText(R.string.str_vitaminD_explain);
+        }
 
         return view;
     }
