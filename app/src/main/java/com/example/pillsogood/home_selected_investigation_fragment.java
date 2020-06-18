@@ -34,8 +34,9 @@ public class home_selected_investigation_fragment extends Fragment {
     private static boolean isChecked14 = false;
     private static boolean isChecked15 = false;
     private static boolean isChecked16 = false;
-    private static boolean isChecked17 = false;    private Button resultButton;
+    private static boolean isChecked17 = false;
 
+    private Button resultButton;
     private CheckBox chk10_1;
     private CheckBox chk10_2;
     private CheckBox chk10_3;
@@ -169,7 +170,6 @@ public class home_selected_investigation_fragment extends Fragment {
             public void onClick(View v) {
                 initialize();
                 selectCheckSurvey();
-                setMaxMin();
                 MainActivity activity = (MainActivity)getActivity();
                 if(isAllCheck()){
                     activity.replaceFragment(home_result_investigation_fragment.newInstance());
@@ -375,4 +375,5 @@ public class home_selected_investigation_fragment extends Fragment {
         isChecked15 = false;
         isChecked16 = false;
         isChecked17 = false;
-    }}
+    }
+}
