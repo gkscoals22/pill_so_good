@@ -1,6 +1,7 @@
 package com.example.pillsogood;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,8 @@ public class home_result_investigation_fragment extends Fragment {
     private TextView firstTextView2;
     private TextView secondTextView;
     private TextView secondTextView2;
+    private TextView linkText;
+    private TextView linkText2;
 
     public static home_result_investigation_fragment newInstance() {
         return new home_result_investigation_fragment();
@@ -32,10 +35,14 @@ public class home_result_investigation_fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.home_result_investigation, container, false);
 
+        resultTextView = (TextView)view.findViewById(R.id.result_textview);
         firstTextView = (TextView)view.findViewById(R.id.first_result);
         firstTextView2 = (TextView)view.findViewById(R.id.first_result2);
         secondTextView = (TextView)view.findViewById(R.id.second_result);
         secondTextView2 = (TextView)view.findViewById(R.id.second_result2);
+        linkText = (TextView)view.findViewById(R.id.textlink1);
+        linkText2 = (TextView)view.findViewById(R.id.textlink2);
+        resultTextView.setText("채민님의 추천 영양 성분");
 
         if(home_selected_investigation_fragment.getFirstResult().equals("lutein")){
             firstTextView.setText(R.string.str_lutein);
@@ -94,6 +101,11 @@ public class home_result_investigation_fragment extends Fragment {
             secondTextView.setText(R.string.str_vitaminD);
             secondTextView2.setText(R.string.str_vitaminD_explain);
         }
+
+        linkText.setMovementMethod(LinkMovementMethod.getInstance());
+        linkText2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkText.setText(R.string.str_link_iherb);
+        linkText2.setText(R.string.str_link_gnc);
 
         return view;
     }

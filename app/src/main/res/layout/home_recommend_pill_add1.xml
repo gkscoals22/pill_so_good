@@ -79,9 +79,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textlink1"
             android:textSize="17sp"
-            android:linksClickable="true"
             android:textColorLink="@color/colorAccent"
-            android:autoLink="web"
             />
 
         <TextView
@@ -119,9 +117,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textlink2"
             android:textSize="17sp"
-            android:linksClickable="true"
             android:textColorLink="@color/colorAccent"
-            android:autoLink="web"
             />
     </LinearLayout>
 

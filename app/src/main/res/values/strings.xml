@@ -18,4 +18,13 @@
     <string name="str_vitaminC_explain">비타민C는 가장 유명한 항산화제로서 체내에서 생성되는 유해산소를 억제하여 세포를 보호해주는 수용성 비타민입니다. 또한 결합 조직과 지지조직을 형성하고 철의 운반과 이용에 도움을 주는 필수적인 영양성분입니다. 비타민C는 철분흡수를 도와, 철분의 결핍으로 인한 빈혈을 예방하는데 도움을 줍니다. 또한 간세포가 손상되는 것을 막아주며 음주를 하게 되면 알코올을 빠르게 제거할 수 있도록 돕습니다. 따라서 흡연자나 음주자는 더욱 많은 섭취가 필요하며, 야외활동을 많이 하거나 감기가 쉽게 걸리는 분들이 섭취 시에 많은 도움이 될 수 있습니다. 음식으로는 오렌지, 감귤, 피망, 딸기, 키위, 브로콜리 등 다양한 식품에 함유되어 있습니다.</string>
     <string name="str_vitaminD">비타민D</string>
     <string name="str_vitaminD_explain">비타민D는 자외선을 받아야 우리 몸에서 합성이 되는 성분으로, 사람의 피부에서 햇볕을 받아 합성이 되지만 최근에는 야외활동을 많이 하지 않고 자외선 차단제를 사용해서 체내 합성이 매우 부족합니다. 비타민D는 몸 안의 칼슘농도를 안정적으로 유지해 뼈를 건강하게 하고 면역 기능에도 관여합니다. 충분 섭취량으로 매일 10~15μg정도가 필요하고 100μg 이상은 섭취하지 않는 것이 좋습니다. 국민 건강 영양조사에 따르면 성인의 70~80%가 기준치(20ng/mL) 이하의 혈중 비타민D 농도를 나타내, 별도의 영양제로 섭취하는 것을 권장합니다.</string>
+    <string name="str_link_omega3"><a href="https://kr.iherb.com/search?kw=%EC%98%A4%EB%A9%94%EA%B0%803">오메가3 추천영양제 이동</a></string>
+    <string name="str_link_magnesium"><a href="https://kr.iherb.com/search?kw=%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98">마그네슘 추천영양제 이동</a></string>
+    <string name="str_link_lactobacillus"><a href="https://kr.iherb.com/search?kw=%EC%9C%A0%EC%82%B0%EA%B7%A0">유산균 추천영양제 이동</a></string>
+    <string name="str_link_lutain"><a href="https://kr.iherb.com/search?kw=%EB%A3%A8%ED%85%8C%EC%9D%B8">루테인 추천영양제 이동</a></string>
+    <string name="str_link_vitaminB"><a href="https://kr.iherb.com/search?kw=%EB%B9%84%ED%83%80%EB%AF%BCB">비타민B 추천영양제 이동</a></string>
+    <string name="str_link_vitaminC"><a href="https://kr.iherb.com/search?kw=%EB%B9%84%ED%83%80%EB%AF%BCC">비타민C 추천영양제 이동</a></string>
+    <string name="str_link_vitaminD"><a href="https://kr.iherb.com/search?kw=%EB%B9%84%ED%83%80%EB%AF%BCD">비타민D 추천영양제 이동</a></string>
+    <string name="str_link_iherb"><a href="https://kr.iherb.com/">iHerb 이동</a></string>
+    <string name="str_link_gnc"><a href="https://www.gnc.com/">GNC 이동</a></string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.pillsogood;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,11 @@ public class home_recommend_pill_add1_fragment extends Fragment{
         profileView.getLayoutParams().height=100;
         profileView.getLayoutParams().width=100;
         profileView.setImageResource(R.drawable.profile_image);
-        linkText.setText(R.string.str_recommend_vitamin_d);
-        linkText2.setText(R.string.str_recommend_lactobacillus);
+
+        linkText.setMovementMethod(LinkMovementMethod.getInstance());
+        linkText2.setMovementMethod(LinkMovementMethod.getInstance());
+        linkText.setText(R.string.str_link_vitaminD);
+        linkText2.setText(R.string.str_link_lactobacillus);
 
         return view;
     }
