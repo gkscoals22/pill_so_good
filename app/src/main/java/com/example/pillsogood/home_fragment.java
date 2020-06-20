@@ -1,6 +1,9 @@
 package com.example.pillsogood;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +48,13 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
         imageView3.getLayoutParams().width=100;
         imageView3.setImageResource(R.drawable.profile_image);
 
+        imageView3.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Handler hd = new Handler();
+                hd.postDelayed(new splashhandler(), 50);
+            }
+        });
+
         imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -64,5 +74,11 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
 
 
         return view;
+    }
+
+    private class splashhandler implements Runnable{
+        public void run(){
+            startActivity(new Intent(getActivity(), profile_activity.class));
+        }
     }
 }

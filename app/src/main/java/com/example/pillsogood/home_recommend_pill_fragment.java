@@ -31,11 +31,11 @@ public class home_recommend_pill_fragment extends Fragment // Fragment 클래스
         ImageView imageView4 = (ImageView)view.findViewById(R.id.imageview4);
         ImageView imageView5 = (ImageView)view.findViewById(R.id.imageview5);
 
-        imageView.getLayoutParams().height=100;
-        imageView.getLayoutParams().width=100;
+        imageView.getLayoutParams().height=70;
+        imageView.getLayoutParams().width=70;
 
 
-        imageView.setImageResource(R.drawable.profile_image);
+//        imageView.setImageResource(R.drawable.profile_image);
         imageView2.setImageResource(R.drawable.pill_check_1);
         imageView3.setImageResource(R.drawable.pill_check_2);
         imageView4.setImageResource(R.drawable.pill_check_3);

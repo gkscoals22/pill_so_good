@@ -42,7 +42,7 @@ public class home_result_investigation_fragment extends Fragment {
         secondTextView2 = (TextView)view.findViewById(R.id.second_result2);
         linkText = (TextView)view.findViewById(R.id.textlink1);
         linkText2 = (TextView)view.findViewById(R.id.textlink2);
-        resultTextView.setText("채민님의 추천 영양 성분");
+        resultTextView.setText(profile_activity.getName() + "님의 추천 영양성분");
 
         if(home_selected_investigation_fragment.getFirstResult().equals("lutein")){
             firstTextView.setText(R.string.str_lutein);

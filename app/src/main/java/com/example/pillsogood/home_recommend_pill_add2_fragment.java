@@ -35,7 +35,8 @@ public class home_recommend_pill_add2_fragment extends Fragment{
         imageView.setImageResource(R.drawable.pill_check_3);
         profileView.getLayoutParams().height=100;
         profileView.getLayoutParams().width=100;
-        profileView.setImageResource(R.drawable.profile_image);
+//        profileView.setImageResource(R.drawable.profile_image);
+
         linkText.setMovementMethod(LinkMovementMethod.getInstance());
         linkText.setText(R.string.str_link_vitaminD);
         linkText2.setMovementMethod(LinkMovementMethod.getInstance());

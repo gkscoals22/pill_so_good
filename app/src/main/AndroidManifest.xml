@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".profile_activity"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
     </application>
 
 </manifest>

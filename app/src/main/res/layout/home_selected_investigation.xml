@@ -15,6 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="0dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:clipToPadding="true"
         android:gravity="center"
         android:orientation="vertical">
@@ -113,13 +115,25 @@
                     android:ems="5"
                     android:inputType="number" />
             </LinearLayout>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="선택 질문"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorOrange"/>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/layout_eye"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -561,13 +575,20 @@
                     android:layout_weight="1"
                     android:ems="5"
                     android:inputType="number" />
+            </LinearLayout>
 
-                <CheckBox
-                    android:id="@+id/select_problem_skin_3"
-                    android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:text="피부에 여드름이나 트러블이 자주 생겨요." />
+                    android:text="공통 질문"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorOrange"/>
             </LinearLayout>
 
             <LinearLayout
@@ -914,6 +935,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/only_female_problem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -927,7 +949,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_vertical|left"
-                    android:text="여성분을 위한 질문입니다. ()님에게 해당하는 것을 모두 선택하세요."
                     android:textColor="#4E4848"
                     android:textSize="18sp" />
 

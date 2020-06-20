@@ -33,9 +33,9 @@ public class home_recommend_pill_add1_fragment extends Fragment{
         linkText2 = (TextView)view.findViewById(R.id.textlink2);
 
         imageView.setImageResource(R.drawable.pill_check_2);
-        profileView.getLayoutParams().height=100;
-        profileView.getLayoutParams().width=100;
-        profileView.setImageResource(R.drawable.profile_image);
+        profileView.getLayoutParams().height=50;
+        profileView.getLayoutParams().width=50;
+//        profileView.setImageResource(R.drawable.profile_image);
 
         linkText.setMovementMethod(LinkMovementMethod.getInstance());
         linkText2.setMovementMethod(LinkMovementMethod.getInstance());

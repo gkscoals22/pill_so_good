@@ -1,7 +1,9 @@
 package com.example.pillsogood;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,8 +49,8 @@ public class home_question_investigation_fragment extends Fragment {
         for(int i = 0 ; i < selectedImage.length ; i++)
             selectedImage[i] = false;
 
-        TextView textView = (TextView)view.findViewById(R.id.textview);
-        textView.setText("Pill so Good");
+//        ImageView logo = (ImageView)view.findViewById(R.id.logo);
+//        logo.setImageResource(R.drawable.logo);
 
 //         drawable에 있는 이미지를 지정합니다.
         imageView[0].setImageResource(R.drawable.store_menu1);
@@ -61,7 +63,7 @@ public class home_question_investigation_fragment extends Fragment {
         imageView[7].setImageResource(R.drawable.store_menu8);
         imageView[8].setImageResource(R.drawable.store_menu9);
         imageView10.setImageResource(R.drawable.store_menu_question);
-        imageView11.setImageResource(R.drawable.profile_image);
+//        imageView11.setImageResource(R.drawable.profile_image);
         next_image.setImageResource(R.drawable.next);
 
         //각 이미지에 대한 클릭 이벤트 처리
@@ -85,17 +87,15 @@ public class home_question_investigation_fragment extends Fragment {
 
         imageView[1].setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                if(checkSelectImageCount()) {
-                    if (!selectedImage[1]) {
-                        imageView[1].setBackgroundResource(R.color.colorAccent);
-                        selectedImage[1] = true;
-                        selectImageCount++;
-                    } else if (selectedImage[1]) {
-                        imageView[1].setBackgroundResource(R.color.transparent);
-                        selectedImage[1] = false;
-                        selectImageCount--;
-                        checkSelectImageCount();
-                    }
+                if (!selectedImage[1] && checkSelectImageCount()) {
+                    imageView[1].setBackgroundResource(R.color.colorAccent);
+                    selectedImage[1] = true;
+                    selectImageCount++;
+                } else if (selectedImage[1]) {
+                    imageView[1].setBackgroundResource(R.color.transparent);
+                    selectedImage[1] = false;
+                    selectImageCount--;
+                    checkSelectImageCount();
                 }
             }
         });
@@ -212,6 +212,13 @@ public class home_question_investigation_fragment extends Fragment {
             }
         });
 
+        imageView11.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Handler hd = new Handler();
+                hd.postDelayed(new home_question_investigation_fragment.splashhandler(), 50);
+            }
+        });
+
         //다음 이미지 클릭 이벤트
         next_image.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -221,6 +228,12 @@ public class home_question_investigation_fragment extends Fragment {
         });
 
         return view;
+    }
+
+    private class splashhandler implements Runnable{
+        public void run(){
+            startActivity(new Intent(getActivity(), profile_activity.class));
+        }
     }
 
     //선택된 이미지 갯수 체크 함수

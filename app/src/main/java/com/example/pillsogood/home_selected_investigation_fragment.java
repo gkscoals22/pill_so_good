@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -44,6 +45,7 @@ public class home_selected_investigation_fragment extends Fragment {
     private static String firstResult = new String();
     private static String secondResult = new String();
 
+    private TextView text_problem17;
     private Button resultButton;
     private CheckBox chk10_1;
     private CheckBox chk10_2;
@@ -136,6 +138,8 @@ public class home_selected_investigation_fragment extends Fragment {
         chk17_3 = (CheckBox)view.findViewById(R.id.check17_3);
         chk17_4 = (CheckBox)view.findViewById(R.id.check17_4);
 
+        text_problem17 = (TextView)view.findViewById(R.id.text_problem17);
+
         //다른 클래스 정의
         home_question_investigation_fragment surveyListClass = new home_question_investigation_fragment();
 
@@ -149,6 +153,7 @@ public class home_selected_investigation_fragment extends Fragment {
         LinearLayout layout7 = (LinearLayout)view.findViewById(R.id.layout_rotation);
         LinearLayout layout8 = (LinearLayout)view.findViewById(R.id.layout_digestion);
         LinearLayout layout9 = (LinearLayout)view.findViewById(R.id.layout_skin);
+        LinearLayout only_female_layout = (LinearLayout) view.findViewById(R.id.only_female_problem);
 
         //button id 가져오기
         resultButton = view.findViewById(R.id.result_btn);
@@ -172,6 +177,13 @@ public class home_selected_investigation_fragment extends Fragment {
             layout8.setVisibility(View.GONE);
         if(!surveyListClass.getSelectImage9())
             layout9.setVisibility(View.GONE);
+
+        if(profile_activity.getGender().equals("남자")) {
+            only_female_layout.setVisibility(View.GONE);
+        }
+        else{
+            text_problem17.setText("여성분을 위한 질문입니다." + profile_activity.getName() + "님에게 해당하는 것을 모두 선택하세요.");
+        }
 
 //        selectCheckSurvey();
         resultButton.setOnClickListener(new View.OnClickListener(){
@@ -311,10 +323,15 @@ public class home_selected_investigation_fragment extends Fragment {
         if(chk16_1.isChecked() || chk16_2.isChecked() || chk16_3.isChecked()){
             isChecked16 = true;
         }
-        if(chk17_1.isChecked() || chk17_2.isChecked() || chk17_3.isChecked() || chk17_4.isChecked()){
+
+        if(profile_activity.getGender().equals("남자")) {
             isChecked17 = true;
         }
-
+        else{
+            if (chk17_1.isChecked() || chk17_2.isChecked() || chk17_3.isChecked() || chk17_4.isChecked()) {
+                isChecked17 = true;
+            }
+        }
         if(isChecked10 && isChecked11 && isChecked12 && isChecked13 && isChecked14 && isChecked15 && isChecked16 && isChecked17){
             return true;
         }

@@ -14,7 +14,6 @@ public class splash_class extends Activity {
 
         Handler hd = new Handler();
         hd.postDelayed(new splashhandler(), 1500); // 1.5초 후에 hd handler
-
     }
 
     private class splashhandler implements Runnable{
