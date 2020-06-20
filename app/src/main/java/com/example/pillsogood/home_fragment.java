@@ -31,20 +31,19 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
     {
         view = inflater.inflate(R.layout.home_fragment,container,false);
 
+        ImageView logoView = (ImageView)view.findViewById(R.id.image_logo);
         ImageView imageView = (ImageView)view.findViewById(R.id.imageview);
         ImageView imageView2 = (ImageView)view.findViewById(R.id.imageview2);
         ImageView imageView3 = (ImageView)view.findViewById(R.id.imageview3);
-        TextView textView = (TextView)view.findViewById(R.id.textview);
 
 //         drawable에 있는 이미지를 지정합니다.
+        logoView.setImageResource(R.drawable.logo);
         imageView.setImageResource(R.drawable.community_1);
         imageView2.setImageResource(R.drawable.community_2);
 
         imageView3.getLayoutParams().height=100;
         imageView3.getLayoutParams().width=100;
         imageView3.setImageResource(R.drawable.profile_image);
-
-        textView.setText("Pill So Good");
 
         imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
