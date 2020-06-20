@@ -1,6 +1,7 @@
 package com.example.pillsogood;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -57,9 +59,10 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
 
         imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-
-                MainActivity activity = (MainActivity)getActivity();
-                activity.replaceFragment(home_question_investigation_fragment.newInstance());
+                if(isWriteProfile()) {
+                    MainActivity activity = (MainActivity) getActivity();
+                    activity.replaceFragment(home_question_investigation_fragment.newInstance());
+                }
             }
         });
 
@@ -74,6 +77,30 @@ public class home_fragment extends Fragment // Fragment 클래스를 상속받�
 
 
         return view;
+    }
+
+    public boolean isWriteProfile(){
+        if(profile_activity.getName().equals("") == false &&
+            profile_activity.getAge().equals("") == false &&
+            profile_activity.getTall().equals("") == false &&
+            profile_activity.getWeight().equals("") == false &&
+            profile_activity.getGender().equals("") == false)
+            return true;
+        else{
+            MainActivity activity = (MainActivity)getActivity();
+
+            AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+            alert.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();     //닫기
+                }
+            });
+            alert.setMessage("프로필을 먼저 작성해주세요.");
+            alert.show();
+
+            return false;
+        }
     }
 
     private class splashhandler implements Runnable{

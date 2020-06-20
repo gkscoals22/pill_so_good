@@ -209,7 +209,6 @@ public class home_selected_investigation_fragment extends Fragment {
                     });
                     alert.setMessage("체크 하지 않은 항목이 있습니다.");
                     alert.show();
-
                 }
             }
         });

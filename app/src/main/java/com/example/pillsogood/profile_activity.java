@@ -84,7 +84,7 @@ public class profile_activity extends Activity {
         if(maleRadio.isChecked() == true){
             gender = "남자";
         }
-        else if(femaleRadio.isChecked() == false){
+        else if(femaleRadio.isChecked() == true){
             gender = "여자";
         }
     }
@@ -93,5 +93,14 @@ public class profile_activity extends Activity {
     }
     public static String getGender(){
         return gender;
+    }
+    public static String getAge(){
+        return age;
+    }
+    public static String getTall(){
+        return tall;
+    }
+    public static String getWeight(){
+        return weight;
     }
 }
