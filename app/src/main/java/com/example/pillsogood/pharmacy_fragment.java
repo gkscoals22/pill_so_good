@@ -27,7 +27,7 @@ public class pharmacy_fragment extends Fragment // Fragment 클래스를 상속�
         view = inflater.inflate(R.layout.pharmacy,container,false);
         imageview = (ImageView)view.findViewById(R.id.imageview);
 
-        imageview.setImageResource(R.drawable.pharmach_map);
+        imageview.setImageResource(R.drawable.pharmach_map2);
 
         return view;
     }
